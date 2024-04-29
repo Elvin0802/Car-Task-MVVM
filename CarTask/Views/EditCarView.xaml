@@ -1,0 +1,61 @@
+﻿<Window x:Class="CarTask.Views.EditCarView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarTask.Views"
+        mc:Ignorable="d"
+        Title="EditCarView" Height="700" Width="800">
+
+
+
+    <StackPanel Orientation="Vertical">
+
+        <ListView x:Name="CarsView" ItemsSource="{Binding Cars}" 
+                  Height="370" SelectedIndex="{Binding SelectedIndexForCars}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Make" Width="150"
+                                        DisplayMemberBinding="{Binding Make, UpdateSourceTrigger=PropertyChanged}"/>
+                        <GridViewColumn Header="Model" Width="150" 
+                                        DisplayMemberBinding="{Binding Model, UpdateSourceTrigger=PropertyChanged}"/>
+                        <GridViewColumn Header="Passengers" Width="150" 
+                                        DisplayMemberBinding="{Binding Passengers, UpdateSourceTrigger=PropertyChanged}"/>
+                        <GridViewColumn Header="Year" Width="150" 
+                                        DisplayMemberBinding="{Binding Year, UpdateSourceTrigger=PropertyChanged}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Orientation="Horizontal" Margin="10,20,10,10">
+            <Label Content="Make:" Width="100" FontSize="18" VerticalContentAlignment="Bottom" Padding="0"/>
+            <TextBox Text="{Binding NewCar.Make}" Width="620" FontSize="18" TextAlignment="Right" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="Model:" Width="100" FontSize="18" VerticalContentAlignment="Bottom" Padding="0"/>
+            <TextBox Text="{Binding NewCar.Model}" Width="620" FontSize="18" TextAlignment="Right" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="Passengers:" Width="100" FontSize="18" VerticalContentAlignment="Bottom" Padding="0"/>
+            <TextBox Text="{Binding NewCar.Passengers}" Width="620" FontSize="18" TextAlignment="Right" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="DateTime:" Width="100" FontSize="18" VerticalContentAlignment="Bottom" Padding="0"/>
+            <Grid Width="620">
+                <DatePicker SelectedDate="{Binding NewCar.Year}" HorizontalAlignment="Right"/>
+            </Grid>
+        </StackPanel>
+
+        <Button Width="200" Height="42" Margin="0,10,0,0" FontSize="24" 
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Content="Edit Car" Command="{Binding EditCommand}" 
+                CommandParameter="{Binding ElementName = CarsView}"/>
+
+    </StackPanel>
+
+</Window>

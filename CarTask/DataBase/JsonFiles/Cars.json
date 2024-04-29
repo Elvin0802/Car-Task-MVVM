@@ -1,0 +1,44 @@
+[
+  {
+    "Model": "Model S",
+    "Make": "Tesla",
+    "Year": "2020-11-07T00:00:00",
+    "Passengers": 5
+  },
+  {
+    "Model": "Model 3",
+    "Make": "Tesla",
+    "Year": "2019-12-06T00:00:00",
+    "Passengers": 5
+  },
+  {
+    "Model": "Model X",
+    "Make": "Tesla",
+    "Year": "2023-03-05T00:00:00",
+    "Passengers": 6
+  },
+  {
+    "Model": "Model Y",
+    "Make": "Tesla",
+    "Year": "2022-04-04T00:00:00",
+    "Passengers": 6
+  },
+  {
+    "Model": "Roadster",
+    "Make": "Tesla",
+    "Year": "2024-02-03T00:00:00",
+    "Passengers": 2
+  },
+  {
+    "Model": "CyberTruck",
+    "Make": "Tesla",
+    "Year": "2024-01-02T00:00:00",
+    "Passengers": 5
+  },
+  {
+    "Model": "SemiTruck",
+    "Make": "Tesla",
+    "Year": "2023-07-01T00:00:00",
+    "Passengers": 1
+  }
+]
